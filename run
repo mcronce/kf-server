@@ -1,0 +1,24 @@
+#!/bin/bash
+source functions.sh
+
+VARS='SERVER_NAME SERVER_SHORT_NAME SERVER_PASSWORD ADMIN_NAME ADMIN_EMAIL ADMIN_PASSWORD PORT_GAME PORT_GAMESPY_QUERY PORT_WEBADMIN';
+
+if [ -z "${PORT_GAME}" ]; then
+	PORT_GAME=7707;
+fi;
+
+if [ -z "${PORT_GAMESPY_QUERY}" ]; then
+	PORT_GAMESPY_QUERY=7717;
+fi;
+
+if [ -z "${PORT_WEBADMIN}" ]; then
+	PORT_WEBADMIN=8075;
+fi;
+
+link_data /data /app;
+overwrite_default_file /app/System/Default.ini /app/System/Default.ini.example $VARS;
+copy_in_vars /app/System/Default.ini $VARS;
+
+cd System;
+exec ./ucc-bin server KF-BioticsLab.rom?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=Default.ini
+
