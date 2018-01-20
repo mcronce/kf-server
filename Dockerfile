@@ -9,7 +9,7 @@ RUN \
 	/app/steamcmd +login ${STEAM_LOGIN} ${STEAM_PASS} ${STEAM_GUARD} +force_install_dir /app/killing-floor +app_update 215360 validate +quit && \
 	rm -Rvf /root/Steam /app/steamapps
 
-ADD Default.ini /app/System/
+ADD Default.ini /app/killing-floor/System/
 ADD run /app/
 
 EXPOSE \
