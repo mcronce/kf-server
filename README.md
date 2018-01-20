@@ -11,6 +11,7 @@ Environment variables
 *NOTE*:  These will all work with the default config file; if you mount in
 your own Default.ini, you'll need to include %VARIABLE_NAME% syntax in the
 file if you want them to work.  See Default.ini for reference.
+
 | Variable              | Utility                                                                   |
 |-----------------------|---------------------------------------------------------------------------|
 | KF_SERVER_NAME        | Server name (in the server list)                                          |
