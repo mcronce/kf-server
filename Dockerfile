@@ -9,6 +9,10 @@ RUN \
 	/app/steamcmd +login ${STEAM_LOGIN} ${STEAM_PASS} ${STEAM_GUARD} +force_install_dir /app/killing-floor +app_update 215360 validate +quit && \
 	rm -Rvf /root/Steam /app/steamapps
 
+# I don't know why this we need to run webadmin in UTF-8, but it's in the
+#    upstream setup.sh, so we'll keep it - just do it here rather than at run
+#    time
+RUN sed -i 's/CharSet="iso-8859-1"/CharSet="utf-8"/g' /app/killing-floor/System/UWeb.int
 ADD Default.ini /app/killing-floor/System/
 ADD run /app/
 
