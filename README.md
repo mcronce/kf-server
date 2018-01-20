@@ -9,7 +9,7 @@ Build args
 Environment variables
 ---------------------
 *NOTE*:  These will all work with the default config file; if you mount in
-your own Default.ini, you'll need to include %VARIABLE_NAME% syntax in the
+your own Default.ini, you'll need to include `%VARIABLE_NAME%` syntax in the
 file if you want them to work.  See Default.ini for reference.
 
 | Variable              | Utility                                                                   |
@@ -41,7 +41,7 @@ You can also enter this code at any time using 'set_steam_guard_code'
  at the console.
 Steam Guard code:FAILED with result code 63
 ```
-Simply re-run the `docker build` command with the STEAM_GUARD argument set to
+Simply re-run the `docker build` command with the `STEAM_GUARD` argument set to
 the code you received:
 ```bash
 docker build -t killingfloor --build-arg STEAM_LOGIN=login --build-arg STEAM_PASS=pass --build-arg STEAM_GUARD=code .
