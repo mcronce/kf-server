@@ -8,6 +8,7 @@ RUN \
 	echo "--- Installing Killing Floor server; output is buffered by Docker, so this will take a while with no visibility." && \
 	/app/steamcmd +login ${STEAM_LOGIN} ${STEAM_PASS} ${STEAM_GUARD} +force_install_dir /app/killing-floor +app_update 215360 validate +quit && \
 	rm -Rvf /root/Steam /app/steamapps
+RUN rm -vf /app/killing-floor/System/Default.ini
 
 # I don't know why this we need to run webadmin in UTF-8, but it's in the
 #    upstream setup.sh, so we'll keep it - just do it here rather than at run
