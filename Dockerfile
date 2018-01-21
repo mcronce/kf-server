@@ -13,7 +13,7 @@ RUN \
 #    upstream setup.sh, so we'll keep it - just do it here rather than at run
 #    time
 RUN sed -i 's/CharSet="iso-8859-1"/CharSet="utf-8"/g' /app/killing-floor/System/UWeb.int
-ADD Default.ini /app/killing-floor/System/
+ADD Default.ini /app/killing-floor/System/Default.ini.example
 ADD run /app/
 
 EXPOSE \
