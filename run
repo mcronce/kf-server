@@ -31,6 +31,6 @@ link_data /data /app/killing-floor;
 overwrite_default_file /app/killing-floor/System/Default.ini /app/killing-floor/System/Default.ini.example $VARS;
 copy_in_vars /app/killing-floor/System/Default.ini $VARS;
 
-cd System;
+cd killing-floor/System;
 exec ./ucc-bin server KF-BioticsLab.rom?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=Default.ini
 
