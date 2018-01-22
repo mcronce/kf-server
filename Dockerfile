@@ -26,6 +26,5 @@ EXPOSE \
 	8075 \
 	20560/udp
 
-WORKDIR /app
 ENTRYPOINT ["/app/run"]
 
