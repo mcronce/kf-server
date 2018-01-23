@@ -27,8 +27,8 @@ if [ -z "${PORT_WEBADMIN}" ]; then
 	PORT_WEBADMIN=8075;
 fi;
 
+overwrite_default_file /data/Default.ini /app/killing-floor/System/Default.ini.example $VARS;
 link_data /data /app/killing-floor;
-overwrite_default_file /app/killing-floor/System/Default.ini /app/killing-floor/System/Default.ini.example $VARS;
 copy_in_vars /app/killing-floor/System/Default.ini $VARS;
 
 cd killing-floor/System;
