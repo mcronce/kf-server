@@ -27,9 +27,9 @@ if [ -z "${PORT_WEBADMIN}" ]; then
 	PORT_WEBADMIN=8075;
 fi;
 
-overwrite_default_file /data/Default.ini /app/killing-floor/System/Default.ini.example $VARS;
+overwrite_default_file /data/System/Default.ini /app/killing-floor/System/Default.ini.example /app/killing-floor/System/Default.ini $VARS;
 link_data /data /app/killing-floor;
-copy_in_vars /app/killing-floor/System/Default.ini $VARS;
+copy_in_vars /data/System/Default.ini /app/killing-floor/System/Default.ini $VARS;
 
 cd killing-floor/System;
 exec ./ucc-bin server KF-BioticsLab.rom?game=KFmod.KFGameType?VACSecured=true -nohomedir ini=Default.ini
