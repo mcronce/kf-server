@@ -15,16 +15,16 @@ if [ -z "${KF_GAME_DIFFICULTY}" ]; then
 	KF_GAME_DIFFICULTY=7.000000;
 fi;
 
-if [ -z "${PORT_GAME}" ]; then
-	PORT_GAME=7707;
+if [ -z "${KF_PORT_GAME}" ]; then
+	KF_PORT_GAME=7707;
 fi;
 
-if [ -z "${PORT_GAMESPY_QUERY}" ]; then
-	PORT_GAMESPY_QUERY=7717;
+if [ -z "${KF_PORT_GAMESPY_QUERY}" ]; then
+	KF_PORT_GAMESPY_QUERY=7717;
 fi;
 
-if [ -z "${PORT_WEBADMIN}" ]; then
-	PORT_WEBADMIN=8075;
+if [ -z "${KF_PORT_WEBADMIN}" ]; then
+	KF_PORT_WEBADMIN=8075;
 fi;
 
 overwrite_default_file /data/System/Default.ini /app/killing-floor/System/Default.ini.example /app/killing-floor/System/Default.ini $VARS;
